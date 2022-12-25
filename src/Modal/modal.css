@@ -1,0 +1,35 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+	pointer-events: none;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.modal.modal_active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.modal__box {
+	width: 550px;
+	padding: 20px;
+	border-radius: 12px;
+	background-color: #fff;
+	cursor: auto;
+	transform: scale(0.5);
+	transition: transform 0.4s;
+}
+
+.modal.modal_active .modal__box {
+	transform: scale(1);
+}
